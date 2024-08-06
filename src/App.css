@@ -1,17 +1,18 @@
 .app{
-  background-color: #222835;
+  background-color: #01040c;
   max-width: 100%;
   max-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: calc(10px + 2vmin);
-  color: rgb(217, 68, 18);
+  color: rgb(18, 217, 25);
 }
 
 .function{
-  background-color: #222835;
+  background-color: #01040c;
   max-width: 100%;
   max-height: fit-content;
   display: flex;
@@ -19,11 +20,12 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(217, 68, 18);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(18, 217, 25);
 }
 
 .class{
-  background-color: #222835;
+  background-color: #01040c;
   max-width: 100%;
   max-height: fit-content;
   display: flex;
@@ -31,7 +33,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(217, 68, 18);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(18, 217, 25);
 }
 
 

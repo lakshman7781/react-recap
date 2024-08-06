@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Class from './class';
 import Functional from './functional';
+import Search from './form';
+import Movies from './movies';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const persons = [
@@ -19,13 +20,13 @@ const classmates=[
 ]
 root.render(
   <React.StrictMode>
+    <Search />
+    <Movies />  
     <App />
     <Class classmates={classmates}/>
     <Functional persons={persons} />
+    
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
