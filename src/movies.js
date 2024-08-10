@@ -3,18 +3,18 @@ import Card from "./movie_card";
 
 const URL = "http://www.omdbapi.com/?i=tt3896198&apikey=c13a933a";
 
-const Movies = () => {
+const Movies = ({ initialSearch }) => {
     const [movies, setMovies] = useState([]);
 
     const SearchMovies = async (search) => {
         const response = await fetch(`${URL}&s=${search}`);
         const data = await response.json();
-        setMovies(data.Search);
+        setMovies(data.Search || []);
     }
 
     useEffect(() => {
-        SearchMovies("avengers");
-    }, []);
+        SearchMovies(initialSearch);
+    }, [initialSearch]);
 
     return (
         <>
@@ -22,9 +22,13 @@ const Movies = () => {
                 <h1>Movies</h1>
             </div>
             <div>
-                {movies.map((movie, index) => (
-                    <Card key={index} movie={movie} />
-                ))}
+                {movies.length === 0 ? (
+                    <p>Loading...</p>
+                ) : (
+                    movies.map((movie, index) => (
+                        <Card key={index} movie={movie} />
+                    ))
+                )}
             </div>
         </>
     );
