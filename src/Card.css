@@ -1,0 +1,33 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+

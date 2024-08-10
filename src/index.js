@@ -6,6 +6,8 @@ import Class from './class';
 import Functional from './functional';
 import Search from './form';
 import Movies from './movies';
+// import Example from './sidebar';
+import Navbar from './Components/navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const persons = [
@@ -18,10 +20,13 @@ const classmates=[
   {name:"harsha",sec:"B"},
   {name:"siva",sec:"C"}
 ]
+
 root.render(
   <React.StrictMode>
+    {/* <Example /> */}
+    <Navbar />
     <Search />
-    <Movies />  
+    <Movies initialSearch="avengers" />  
     <App />
     <Class classmates={classmates}/>
     <Functional persons={persons} />
